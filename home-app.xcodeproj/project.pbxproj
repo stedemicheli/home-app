@@ -17,6 +17,7 @@
 		3D5C9A18273FBAD500300857 /* home_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A17273FBAD500300857 /* home_appUITestsLaunchTests.swift */; };
 		3D5C9A2B273FC36F00300857 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A2A273FC36F00300857 /* NetworkClient.swift */; };
 		3D5C9A2F273FC59800300857 /* PropertyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A2E273FC59800300857 /* PropertyResponse.swift */; };
+		3D5C9A31273FC71400300857 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A30273FC71400300857 /* Property.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		3D5C9A17273FBAD500300857 /* home_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3D5C9A2A273FC36F00300857 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		3D5C9A2E273FC59800300857 /* PropertyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyResponse.swift; sourceTree = "<group>"; };
+		3D5C9A30273FC71400300857 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 		3D5C9A2D273FC57D00300857 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				3D5C9A30273FC71400300857 /* Property.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5C9A31273FC71400300857 /* Property.swift in Sources */,
 				3D5C99FF273FBAD400300857 /* PersistenceStore.swift in Sources */,
 				3D5C9A02273FBAD400300857 /* home_app.xcdatamodeld in Sources */,
 				3D5C9A2F273FC59800300857 /* PropertyResponse.swift in Sources */,
