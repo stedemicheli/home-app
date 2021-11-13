@@ -15,6 +15,7 @@
 		3D5C9A0C273FBAD400300857 /* home_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A0B273FBAD400300857 /* home_appTests.swift */; };
 		3D5C9A16273FBAD500300857 /* home_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A15273FBAD500300857 /* home_appUITests.swift */; };
 		3D5C9A18273FBAD500300857 /* home_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A17273FBAD500300857 /* home_appUITestsLaunchTests.swift */; };
+		3D5C9A2B273FC36F00300857 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A2A273FC36F00300857 /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		3D5C9A11273FBAD500300857 /* home-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "home-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D5C9A15273FBAD500300857 /* home_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_appUITests.swift; sourceTree = "<group>"; };
 		3D5C9A17273FBAD500300857 /* home_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3D5C9A2A273FC36F00300857 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		3D5C9A27273FC2FC00300857 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				3D5C9A2A273FC36F00300857 /* NetworkClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				3D5C99FF273FBAD400300857 /* Persistence.swift in Sources */,
 				3D5C9A02273FBAD400300857 /* home_app.xcdatamodeld in Sources */,
 				3D5C99F6273FBAD300300857 /* HomeApp.swift in Sources */,
+				3D5C9A2B273FC36F00300857 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
