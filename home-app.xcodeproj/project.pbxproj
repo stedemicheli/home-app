@@ -18,6 +18,10 @@
 		3D5C9A2B273FC36F00300857 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A2A273FC36F00300857 /* NetworkClient.swift */; };
 		3D5C9A2F273FC59800300857 /* PropertyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A2E273FC59800300857 /* PropertyResponse.swift */; };
 		3D5C9A31273FC71400300857 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A30273FC71400300857 /* Property.swift */; };
+		3D5C9A33273FC8B700300857 /* PropertyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A32273FC8B700300857 /* PropertyListViewModel.swift */; };
+		3D5C9A35273FC8BC00300857 /* PropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A34273FC8BC00300857 /* PropertyViewModel.swift */; };
+		3D5C9A37273FC97600300857 /* PropertyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A36273FC97600300857 /* PropertyService.swift */; };
+		3D5C9A3A273FCB6300300857 /* PropertyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A39273FCB6300300857 /* PropertyParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		3D5C9A2A273FC36F00300857 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		3D5C9A2E273FC59800300857 /* PropertyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyResponse.swift; sourceTree = "<group>"; };
 		3D5C9A30273FC71400300857 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		3D5C9A32273FC8B700300857 /* PropertyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListViewModel.swift; sourceTree = "<group>"; };
+		3D5C9A34273FC8BC00300857 /* PropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewModel.swift; sourceTree = "<group>"; };
+		3D5C9A36273FC97600300857 /* PropertyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyService.swift; sourceTree = "<group>"; };
+		3D5C9A39273FCB6300300857 /* PropertyParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,7 @@
 				3D5C9A26273FC2F000300857 /* Models */,
 				3D5C9A28273FC30400300857 /* Persistence */,
 				3D5C9A29273FC30B00300857 /* Services */,
+				3D5C9A38273FCB5800300857 /* Utils */,
 				3D5C9A25273FC2EA00300857 /* ViewModels */,
 				3D5C9A24273FC2E700300857 /* Views */,
 				3D5C99FB273FBAD400300857 /* Preview Content */,
@@ -150,6 +159,8 @@
 		3D5C9A25273FC2EA00300857 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				3D5C9A32273FC8B700300857 /* PropertyListViewModel.swift */,
+				3D5C9A34273FC8BC00300857 /* PropertyViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -183,6 +194,7 @@
 		3D5C9A29273FC30B00300857 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3D5C9A36273FC97600300857 /* PropertyService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -201,6 +213,14 @@
 				3D5C9A30273FC71400300857 /* Property.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		3D5C9A38273FCB5800300857 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3D5C9A39273FCB6300300857 /* PropertyParser.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,9 +356,13 @@
 				3D5C9A31273FC71400300857 /* Property.swift in Sources */,
 				3D5C99FF273FBAD400300857 /* PersistenceStore.swift in Sources */,
 				3D5C9A02273FBAD400300857 /* home_app.xcdatamodeld in Sources */,
+				3D5C9A35273FC8BC00300857 /* PropertyViewModel.swift in Sources */,
+				3D5C9A37273FC97600300857 /* PropertyService.swift in Sources */,
 				3D5C9A2F273FC59800300857 /* PropertyResponse.swift in Sources */,
+				3D5C9A33273FC8B700300857 /* PropertyListViewModel.swift in Sources */,
 				3D5C99F6273FBAD300300857 /* HomeApp.swift in Sources */,
 				3D5C9A2B273FC36F00300857 /* NetworkClient.swift in Sources */,
+				3D5C9A3A273FCB6300300857 /* PropertyParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
