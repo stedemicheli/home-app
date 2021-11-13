@@ -11,7 +11,7 @@ struct PropertyListResponse: Codable {
     let resultCount, start, page, pageCount: Int
     let itemsPerPage: Int
     let hasNextPage, hasPreviousPage: Bool
-    let items: [String]
+    let items: [PropertyResponse]
 }
 
 struct PropertyResponse: Codable {

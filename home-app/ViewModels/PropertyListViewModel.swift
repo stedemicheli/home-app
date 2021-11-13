@@ -67,7 +67,7 @@ final class PropertyListViewModel: ObservableObject {
             title: model.title,
             address: address,
             price: price,
-            imageURL: URL(string: model.imageURL)
+            imageURL: model.imageURL.flatMap(URL.init)
         )
     }
 }
