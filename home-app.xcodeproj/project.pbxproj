@@ -16,6 +16,7 @@
 		3D5C9A16273FBAD500300857 /* home_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A15273FBAD500300857 /* home_appUITests.swift */; };
 		3D5C9A18273FBAD500300857 /* home_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A17273FBAD500300857 /* home_appUITestsLaunchTests.swift */; };
 		3D5C9A2B273FC36F00300857 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A2A273FC36F00300857 /* NetworkClient.swift */; };
+		3D5C9A2F273FC59800300857 /* PropertyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A2E273FC59800300857 /* PropertyResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		3D5C9A15273FBAD500300857 /* home_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_appUITests.swift; sourceTree = "<group>"; };
 		3D5C9A17273FBAD500300857 /* home_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3D5C9A2A273FC36F00300857 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		3D5C9A2E273FC59800300857 /* PropertyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,8 @@
 		3D5C9A26273FC2F000300857 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3D5C9A2D273FC57D00300857 /* Domain */,
+				3D5C9A2C273FC57800300857 /* Network */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +183,21 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		3D5C9A2C273FC57800300857 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3D5C9A2E273FC59800300857 /* PropertyResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3D5C9A2D273FC57D00300857 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +332,7 @@
 			files = (
 				3D5C99FF273FBAD400300857 /* PersistenceStore.swift in Sources */,
 				3D5C9A02273FBAD400300857 /* home_app.xcdatamodeld in Sources */,
+				3D5C9A2F273FC59800300857 /* PropertyResponse.swift in Sources */,
 				3D5C99F6273FBAD300300857 /* HomeApp.swift in Sources */,
 				3D5C9A2B273FC36F00300857 /* NetworkClient.swift in Sources */,
 			);
