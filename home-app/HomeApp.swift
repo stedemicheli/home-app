@@ -14,6 +14,7 @@ struct HomeApp: App {
 
     var body: some Scene {
         WindowGroup {
+            PropertyListView(viewModel: PropertyListViewModel(service: PropertyService(), parser: PropertyParser()))
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
