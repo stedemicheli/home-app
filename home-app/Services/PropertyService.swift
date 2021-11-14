@@ -32,8 +32,8 @@ final class PropertyService: PropertyFetchable {
     
     private func buildPropertiesURLComponents() -> URLComponents {
         var components = URLComponents()
-        components.scheme = "https"
-        components.host = "http://private-492e5-homegate1.apiary-mock.com"
+        components.scheme = "http"
+        components.host = "private-492e5-homegate1.apiary-mock.com"
         components.path = "/properties"
         return components
     }
