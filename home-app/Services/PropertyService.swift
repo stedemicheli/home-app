@@ -53,7 +53,7 @@ extension Property {
         self.city = response.city
         self.country = response.country
         self.geoLocation = response.geoLocation
-        self.imageURL = response.pictures.first
+        self.imageURL = response.picFilename1
         self.currency = response.currency
         self.sellingPrice = response.sellingPrice
         self.price = response.price

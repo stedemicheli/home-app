@@ -59,8 +59,8 @@ final class PropertyListViewModel: ObservableObject {
         )
         let price = parser.parse(
             currency: model.currency,
-            sellingPrice: model.sellingPrice,
-            price: model.price,
+            sellingPrice: model.sellingPrice ?? 0,
+            price: model.price ?? 0,
             priceUnit: model.priceUnit
         )
         return PropertyViewModel(

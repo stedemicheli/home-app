@@ -18,7 +18,7 @@ struct Property {
     let geoLocation: String
     let imageURL: String?
     let currency: String
-    let sellingPrice: Int
-    let price: Int
+    let sellingPrice: Int?
+    let price: Int?
     let priceUnit: String
 }
