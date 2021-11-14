@@ -28,6 +28,7 @@ final class PropertyListViewModel: ObservableObject {
     ) {
         self.service = service
         self.parser = parser
+        fetchProperties()
     }
     
     func fetchProperties() {
