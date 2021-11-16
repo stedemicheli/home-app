@@ -75,7 +75,7 @@ final class PersistenceStore: PersistenceStoreProtocol {
         var resource: Resource?
         var error: Error?
         guard let fetchRequest: NSFetchRequest<Resource> = Resource.fetchRequest() as? NSFetchRequest<Resource> else { throw PersistenceError.fetchRequestError }
-        let idPredicate = NSPredicate(format: "identifier == %@", identifier)
+        let idPredicate = NSPredicate(format: "id == %@", identifier)
         let predicate = NSCompoundPredicate(
             type: .and,
             subpredicates: [idPredicate]
@@ -106,8 +106,8 @@ final class PersistenceStore: PersistenceStoreProtocol {
         let entityName = String(describing: Resource.self)
         let fetchRequest = NSFetchRequest<Resource>(entityName: entityName)
 
-        let timeSortDescriptor = NSSortDescriptor(key: "timestamp", ascending: true)
-        fetchRequest.sortDescriptors = [timeSortDescriptor]
+        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
         fetchRequest.fetchLimit = fetchLimit
 
         context.performAndWait {
