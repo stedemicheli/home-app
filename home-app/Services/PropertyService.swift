@@ -12,12 +12,21 @@ protocol PropertyFetchable {
     func fetchProperties() -> AnyPublisher<[Property], Error>
 }
 
-final class PropertyService: PropertyFetchable {
+protocol PropertyPersisteable {
+    func save(property: Property) throws
+}
+
+typealias PropertyServiceable = PropertyFetchable & PropertyPersisteable
+
+final class PropertyService: PropertyServiceable {
     
     private let networkClient: NetworkClient
+    private let persistenceStore: PersistenceStoreProtocol
     
-    init(networkClient: NetworkClient = NetworkClientImpl()) {
+    init(networkClient: NetworkClient = NetworkClientImpl(),
+         persistenceStore: PersistenceStoreProtocol = PersistenceStore.shared) {
         self.networkClient = networkClient
+        self.persistenceStore = persistenceStore
     }
     
     func fetchProperties() -> AnyPublisher<[Property], Error> {
@@ -28,6 +37,11 @@ final class PropertyService: PropertyFetchable {
             .mapError { $0 }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
+    }
+    
+    func save(property: Property) throws {
+        let _ = PersistedProperty(property: property)
+        try persistenceStore.save(context: nil)
     }
     
     private func buildPropertiesURLComponents() -> URLComponents {
@@ -53,7 +67,7 @@ extension Property {
         self.city = response.city
         self.country = response.country
         self.geoLocation = response.geoLocation
-        self.imageURL = response.picFilename1
+        self.imageURL = response.picFilename1.replacingOccurrences(of: "uat.", with: "")
         self.currency = response.currency
         self.sellingPrice = response.sellingPrice
         self.price = response.price
