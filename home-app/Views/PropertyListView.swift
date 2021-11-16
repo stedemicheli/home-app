@@ -16,20 +16,26 @@ struct PropertyListView: View {
     }
     
     var body: some View {
-        switch viewModel.state {
-        case .loading:
-            Text("Loading")
-        case .error(message: let message):
-            Text(message)
-        case .loaded(properties: let properties):
-            List {
-                ForEach(properties) { property in
-                    PropertyView(
-                        image: property.imageURL,
-                        title: property.title,
-                        address: property.address
-                    )
+        NavigationView {
+            switch viewModel.state {
+            case .loading:
+                Text("Loading")
+            case .error(message: let message):
+                Text(message)
+            case .loaded(properties: let properties):
+                List {
+                    ForEach(properties) { property in
+                        PropertyView(
+                            image: property.imageURL,
+                            title: property.title,
+                            address: property.address
+                        )
+                        .onTapGesture {
+                            viewModel.like(property: property)
+                        }
+                    }
                 }
+                .navigationTitle("Properties") // TODO: Localize
             }
         }
     }
