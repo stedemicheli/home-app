@@ -25,6 +25,7 @@
 		3D5C9A3E273FCF9600300857 /* PropertyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A3D273FCF9600300857 /* PropertyListView.swift */; };
 		3D5C9A40273FCFB500300857 /* PropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A3F273FCFB500300857 /* PropertyView.swift */; };
 		3D5C9A43273FD2A200300857 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3D5C9A42273FD2A200300857 /* SDWebImageSwiftUI */; };
+		3DED68D127428BF4007C278D /* PersistedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DED68D027428BF4007C278D /* PersistedProperty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		3D5C9A3D273FCF9600300857 /* PropertyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListView.swift; sourceTree = "<group>"; };
 		3D5C9A3F273FCFB500300857 /* PropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyView.swift; sourceTree = "<group>"; };
 		3D90DC01274112AC00B8050E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3DED68D027428BF4007C278D /* PersistedProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistedProperty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				3D5C9A2D273FC57D00300857 /* Domain */,
+				3DED68CF27428BDC007C278D /* Persistence */,
 				3D5C9A2C273FC57800300857 /* Network */,
 			);
 			path = Models;
@@ -231,6 +234,14 @@
 				3D5C9A39273FCB6300300857 /* PropertyParser.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3DED68CF27428BDC007C278D /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				3DED68D027428BF4007C278D /* PersistedProperty.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +388,7 @@
 				3D5C9A2F273FC59800300857 /* PropertyResponse.swift in Sources */,
 				3D5C9A33273FC8B700300857 /* PropertyListViewModel.swift in Sources */,
 				3D5C99F6273FBAD300300857 /* HomeApp.swift in Sources */,
+				3DED68D127428BF4007C278D /* PersistedProperty.swift in Sources */,
 				3D5C9A2B273FC36F00300857 /* NetworkClient.swift in Sources */,
 				3D5C9A40273FCFB500300857 /* PropertyView.swift in Sources */,
 				3D5C9A3E273FCF9600300857 /* PropertyListView.swift in Sources */,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="21A5506j" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Property" representedClassName="Property" syncable="YES" codeGenerationType="class">
+    <entity name="PersistedProperty" representedClassName="PersistedProperty" syncable="YES" codeGenerationType="class">
         <attribute name="city" attributeType="String"/>
         <attribute name="country" attributeType="String"/>
         <attribute name="currency" attributeType="String"/>
@@ -16,6 +16,6 @@
         <attribute name="zip" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Property" positionX="-63" positionY="-18" width="128" height="224"/>
+        <element name="PersistedProperty" positionX="-63" positionY="-18" width="128" height="224"/>
     </elements>
 </model>

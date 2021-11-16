@@ -22,3 +22,37 @@ struct Property {
     let price: Int?
     let priceUnit: String
 }
+
+extension Property {
+    
+    init?(property: PersistedProperty) {
+        guard let title = property.title,
+              let street = property.street,
+              let zip = property.zip,
+              let text = property.text,
+              let city = property.city,
+              let country = property.country,
+              let geoLocation = property.geoLocation,
+              let imageURL = property.imageURL,
+              let currency = property.currency,
+              let priceUnit = property.priceUnit
+        else {
+            return nil
+        }
+        
+        self.init(
+            title: title,
+            street: street,
+            zip: zip,
+            text: text,
+            city: city,
+            country: country,
+            geoLocation: geoLocation,
+            imageURL: imageURL,
+            currency: currency,
+            sellingPrice: Int(property.sellingPrice),
+            price: Int(property.price),
+            priceUnit: priceUnit
+        )
+    }
+}
