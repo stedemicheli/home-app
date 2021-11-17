@@ -47,7 +47,7 @@ final class PropertyListViewModel: ObservableObject {
                 guard let self = self else { return }
                 self.properties = properties
                 let viewModels = properties.map(self.toPropertyViewModel)
-                self.state = .loaded(properties: viewModels) // TODO: make sure one image after the other is loaded
+                self.state = .loaded(properties: viewModels)
             }
             .store(in: &cancellables)
     }

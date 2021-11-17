@@ -20,15 +20,21 @@ struct BookmarkView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(
-                    width: 75,
-                    height: 75
+                    width: .imageSize,
+                    height: .imageSize
                 )
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: .spacing) {
                 Text(title)
                 Text(address)
             }
         }
     }
+}
+
+private extension CGFloat {
+    
+    static let spacing: CGFloat = 10
+    static let imageSize: CGFloat = 75
 }
 
 struct BookmarkView_Previews: PreviewProvider {

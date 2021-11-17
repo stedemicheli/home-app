@@ -17,7 +17,7 @@ struct PropertyView: View {
     let onLike: () -> Void
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: .spacing) {
             ZStack {
                 WebImage(url: image)
                     .resizable()
@@ -26,21 +26,21 @@ struct PropertyView: View {
                         minWidth: 0,
                         maxWidth: .infinity,
                         minHeight: 0,
-                        maxHeight: 200
+                        maxHeight: .imageHeight
                     )
                 Image(systemName: "suit.heart.fill") // TODO: Make image fill when saved
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 30, height: 30)
+                    .frame(width: .imageSize, height: .imageSize)
                     .foregroundColor(.red)
-                    .offset(x: 100, y: -75)
+                    .offset(x: .imageXOffset, y: .imageYOffset)
                     .onTapGesture(perform: onLike)
                 HStack {
                     Text(price) // TODO: Handle formatting when too long
                         .lineLimit(1)
                         .frame(
-                            minWidth: 80,
-                            minHeight: 30
+                            minWidth: .priceWidth,
+                            minHeight: .priceHeight
                         )
                         .foregroundColor(Color.white)
                         .background(Color.blue)
@@ -55,6 +55,17 @@ struct PropertyView: View {
             }
         }
     }
+}
+
+private extension CGFloat {
+    
+    static let spacing: CGFloat = 10
+    static let priceWidth: CGFloat = 80
+    static let priceHeight: CGFloat = 30
+    static let imageSize: CGFloat = 30
+    static let imageXOffset: CGFloat = 100
+    static let imageYOffset: CGFloat = -75
+    static let imageHeight: CGFloat = 200
 }
 
 struct PropertyView_Previews: PreviewProvider {
