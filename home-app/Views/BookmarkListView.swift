@@ -19,7 +19,7 @@ struct BookmarkListView: View {
         NavigationView {
             switch viewModel.state {
             case .loading:
-                Text("Loading")
+                Text("Loading") // TODO: Localize
             case .error(message: let message):
                 Text(message)
             case .loaded(bookmarks: let bookmarks):

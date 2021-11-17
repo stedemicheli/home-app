@@ -28,7 +28,8 @@ struct PropertyListView: View {
                         PropertyView(
                             image: property.imageURL,
                             title: property.title,
-                            address: property.address
+                            address: property.address,
+                            price: property.price
                         )
                         .onTapGesture {
                             viewModel.like(property: property)

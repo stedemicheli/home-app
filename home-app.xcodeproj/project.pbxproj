@@ -29,6 +29,7 @@
 		3DCDB16D27452AB800B56696 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCDB16C27452AB800B56696 /* BookmarkView.swift */; };
 		3DCDB16F27452C6900B56696 /* BookmarkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCDB16E27452C6900B56696 /* BookmarkListViewModel.swift */; };
 		3DCDB17127452C7000B56696 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCDB17027452C7000B56696 /* BookmarkViewModel.swift */; };
+		3DCDB1732745350C00B56696 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCDB1722745350C00B56696 /* HomeBuilder.swift */; };
 		3DED68D127428BF4007C278D /* PersistedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DED68D027428BF4007C278D /* PersistedProperty.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		3DCDB16C27452AB800B56696 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
 		3DCDB16E27452C6900B56696 /* BookmarkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListViewModel.swift; sourceTree = "<group>"; };
 		3DCDB17027452C7000B56696 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
+		3DCDB1722745350C00B56696 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		3DED68D027428BF4007C278D /* PersistedProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistedProperty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 			children = (
 				3D90DC01274112AC00B8050E /* Info.plist */,
 				3D5C99F5273FBAD300300857 /* HomeApp.swift */,
+				3DCDB1722745350C00B56696 /* HomeBuilder.swift */,
 				3D5C99F9273FBAD400300857 /* Assets.xcassets */,
 				3D5C9A27273FC2FC00300857 /* Networking */,
 				3D5C9A26273FC2F000300857 /* Models */,
@@ -398,6 +401,7 @@
 				3DCDB17127452C7000B56696 /* BookmarkViewModel.swift in Sources */,
 				3D5C9A35273FC8BC00300857 /* PropertyViewModel.swift in Sources */,
 				3DCDB16F27452C6900B56696 /* BookmarkListViewModel.swift in Sources */,
+				3DCDB1732745350C00B56696 /* HomeBuilder.swift in Sources */,
 				3DA9403E2743EB8D0097B7DA /* BookmarkListView.swift in Sources */,
 				3D5C9A37273FC97600300857 /* PropertyService.swift in Sources */,
 				3DCDB16D27452AB800B56696 /* BookmarkView.swift in Sources */,

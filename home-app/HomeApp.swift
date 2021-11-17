@@ -15,15 +15,15 @@ struct HomeApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                PropertyListView(viewModel: PropertyListViewModel(service: PropertyService(), parser: PropertyParser()))
+                HomeBuilder.buildPropertyList()
                     .tabItem { Label("Properties", systemImage: "house") }
                     .tag(HomeAppTabs.properties)
-                BookmarkListView(viewModel: BookmarkListViewModel(service: PropertyService(), parser: PropertyParser()))
+                HomeBuilder.buildBookmarkList()
                     .tabItem { Label("Bookmarks", systemImage: "bookmark") }
                     .tag(HomeAppTabs.bookmarks)
             }
-//            ContentView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            //            ContentView()
+            //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

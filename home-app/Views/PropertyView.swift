@@ -13,6 +13,7 @@ struct PropertyView: View {
     let image: URL?
     let title: String
     let address: String
+    let price: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -27,7 +28,7 @@ struct PropertyView: View {
                         maxHeight: 200
                     )
                 HStack {
-                    Text("500 $") // TODO: Handle formatting when too long
+                    Text(price) // TODO: Handle formatting when too long
                         .lineLimit(1)
                         .frame(
                             minWidth: 80,
@@ -53,7 +54,8 @@ struct PropertyView_Previews: PreviewProvider {
         PropertyView(
             image: URL(string: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL-xdlN1G5iYo-v8iv21ylNY-Z19uEPJwrHyNg2OLXQVbLg9J3jYD9dPrask05xWltwt8&usqp=CAU")!,
             title: "Erstebezug in Toplage",
-            address: "Singerstrasse. 63, Zurich"
+            address: "Singerstrasse. 63, Zurich",
+            price: "CHF 500"
         )
     }
 }
