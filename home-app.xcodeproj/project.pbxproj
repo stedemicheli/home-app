@@ -12,9 +12,6 @@
 		3D5C99FD273FBAD400300857 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5C99FC273FBAD400300857 /* Preview Assets.xcassets */; };
 		3D5C99FF273FBAD400300857 /* PersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C99FE273FBAD400300857 /* PersistenceStore.swift */; };
 		3D5C9A02273FBAD400300857 /* home_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A00273FBAD400300857 /* home_app.xcdatamodeld */; };
-		3D5C9A0C273FBAD400300857 /* home_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A0B273FBAD400300857 /* home_appTests.swift */; };
-		3D5C9A16273FBAD500300857 /* home_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A15273FBAD500300857 /* home_appUITests.swift */; };
-		3D5C9A18273FBAD500300857 /* home_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A17273FBAD500300857 /* home_appUITestsLaunchTests.swift */; };
 		3D5C9A2B273FC36F00300857 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A2A273FC36F00300857 /* NetworkClient.swift */; };
 		3D5C9A2F273FC59800300857 /* PropertyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A2E273FC59800300857 /* PropertyResponse.swift */; };
 		3D5C9A31273FC71400300857 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C9A30273FC71400300857 /* Property.swift */; };
@@ -30,6 +27,8 @@
 		3DCDB16F27452C6900B56696 /* BookmarkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCDB16E27452C6900B56696 /* BookmarkListViewModel.swift */; };
 		3DCDB17127452C7000B56696 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCDB17027452C7000B56696 /* BookmarkViewModel.swift */; };
 		3DCDB1732745350C00B56696 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCDB1722745350C00B56696 /* HomeBuilder.swift */; };
+		3DCDB175274535D600B56696 /* PropertyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCDB174274535D600B56696 /* PropertyViewModelTests.swift */; };
+		3DCDB1782745360200B56696 /* PropertyServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCDB1772745360200B56696 /* PropertyServiceMock.swift */; };
 		3DED68D127428BF4007C278D /* PersistedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DED68D027428BF4007C278D /* PersistedProperty.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,10 +57,7 @@
 		3D5C99FE273FBAD400300857 /* PersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStore.swift; sourceTree = "<group>"; };
 		3D5C9A01273FBAD400300857 /* home_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = home_app.xcdatamodel; sourceTree = "<group>"; };
 		3D5C9A07273FBAD400300857 /* home-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "home-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D5C9A0B273FBAD400300857 /* home_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_appTests.swift; sourceTree = "<group>"; };
 		3D5C9A11273FBAD500300857 /* home-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "home-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D5C9A15273FBAD500300857 /* home_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_appUITests.swift; sourceTree = "<group>"; };
-		3D5C9A17273FBAD500300857 /* home_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3D5C9A2A273FC36F00300857 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		3D5C9A2E273FC59800300857 /* PropertyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyResponse.swift; sourceTree = "<group>"; };
 		3D5C9A30273FC71400300857 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
@@ -77,6 +73,8 @@
 		3DCDB16E27452C6900B56696 /* BookmarkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListViewModel.swift; sourceTree = "<group>"; };
 		3DCDB17027452C7000B56696 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
 		3DCDB1722745350C00B56696 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		3DCDB174274535D600B56696 /* PropertyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewModelTests.swift; sourceTree = "<group>"; };
+		3DCDB1772745360200B56696 /* PropertyServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyServiceMock.swift; sourceTree = "<group>"; };
 		3DED68D027428BF4007C278D /* PersistedProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistedProperty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +109,6 @@
 			children = (
 				3D5C99F4273FBAD300300857 /* home-app */,
 				3D5C9A0A273FBAD400300857 /* home-appTests */,
-				3D5C9A14273FBAD500300857 /* home-appUITests */,
 				3D5C99F3273FBAD300300857 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -156,18 +153,10 @@
 		3D5C9A0A273FBAD400300857 /* home-appTests */ = {
 			isa = PBXGroup;
 			children = (
-				3D5C9A0B273FBAD400300857 /* home_appTests.swift */,
+				3DCDB176274535F700B56696 /* Mocks */,
+				3DCDB174274535D600B56696 /* PropertyViewModelTests.swift */,
 			);
 			path = "home-appTests";
-			sourceTree = "<group>";
-		};
-		3D5C9A14273FBAD500300857 /* home-appUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3D5C9A15273FBAD500300857 /* home_appUITests.swift */,
-				3D5C9A17273FBAD500300857 /* home_appUITestsLaunchTests.swift */,
-			);
-			path = "home-appUITests";
 			sourceTree = "<group>";
 		};
 		3D5C9A24273FC2E700300857 /* Views */ = {
@@ -249,6 +238,14 @@
 				3D5C9A39273FCB6300300857 /* PropertyParser.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3DCDB176274535F700B56696 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCDB1772745360200B56696 /* PropertyServiceMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		3DED68CF27428BDC007C278D /* Persistence */ = {
@@ -420,7 +417,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D5C9A0C273FBAD400300857 /* home_appTests.swift in Sources */,
+				3DCDB1782745360200B56696 /* PropertyServiceMock.swift in Sources */,
+				3DCDB175274535D600B56696 /* PropertyViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,8 +426,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D5C9A18273FBAD500300857 /* home_appUITestsLaunchTests.swift in Sources */,
-				3D5C9A16273FBAD500300857 /* home_appUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
