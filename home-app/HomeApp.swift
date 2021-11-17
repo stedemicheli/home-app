@@ -10,8 +10,6 @@ import SwiftUI
 @main
 struct HomeApp: App {
     
-//    let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
             TabView {
@@ -22,8 +20,6 @@ struct HomeApp: App {
                     .tabItem { Label("Bookmarks", systemImage: "bookmark") }
                     .tag(HomeAppTabs.bookmarks)
             }
-            //            ContentView()
-            //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
