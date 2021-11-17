@@ -14,9 +14,21 @@ struct HomeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            PropertyListView(viewModel: PropertyListViewModel(service: PropertyService(), parser: PropertyParser()))
+            TabView {
+                PropertyListView(viewModel: PropertyListViewModel(service: PropertyService(), parser: PropertyParser()))
+                    .tabItem { Label("Properties", systemImage: "house") }
+                    .tag(HomeAppTabs.properties)
+                BookmarkListView(viewModel: BookmarkListViewModel(service: PropertyService(), parser: PropertyParser()))
+                    .tabItem { Label("Bookmarks", systemImage: "bookmark") }
+                    .tag(HomeAppTabs.bookmarks)
+            }
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
+}
+
+enum HomeAppTabs {
+    case properties
+    case bookmarks
 }
