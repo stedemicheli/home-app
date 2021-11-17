@@ -29,11 +29,11 @@ struct PropertyListView: View {
                             image: property.imageURL,
                             title: property.title,
                             address: property.address,
-                            price: property.price
+                            price: property.price,
+                            onLike: {
+                                viewModel.like(property: property)
+                            }
                         )
-                        .onTapGesture {
-                            viewModel.like(property: property)
-                        }
                     }
                 }
                 .navigationTitle("Properties") // TODO: Localize
