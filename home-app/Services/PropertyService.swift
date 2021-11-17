@@ -12,13 +12,17 @@ protocol PropertyFetchable {
     func fetchProperties() -> AnyPublisher<[Property], Error>
 }
 
+protocol PersistentPropertyFetchable {
+    func fetchPersistedProperties() -> AnyPublisher<[Property], Error>
+}
+
 protocol PropertyPersisteable {
     func save(property: Property) throws
 }
 
 typealias PropertyServiceable = PropertyFetchable & PropertyPersisteable
 
-final class PropertyService: PropertyServiceable {
+final class PropertyService: PropertyServiceable, PersistentPropertyFetchable {
     
     private let networkClient: NetworkClient
     private let persistenceStore: PersistenceStoreProtocol
@@ -39,6 +43,18 @@ final class PropertyService: PropertyServiceable {
             .eraseToAnyPublisher()
     }
     
+    func fetchPersistedProperties() -> AnyPublisher<[Property], Error> {
+        do {
+            let persistedProperties: [PersistedProperty] = try persistenceStore.fetch(recent: 100, in: nil)
+            let properties = persistedProperties.compactMap(Property.init)
+            return Just(properties)
+                .setFailureType(to: Error.self)
+                .eraseToAnyPublisher()
+        } catch let error {
+            return Fail(error: error).eraseToAnyPublisher()
+        }
+    }
+    
     func save(property: Property) throws {
         let _ = PersistedProperty(property: property)
         try persistenceStore.save(context: nil)
@@ -54,23 +70,5 @@ final class PropertyService: PropertyServiceable {
     
     private func toProperties(_ response: PropertyListResponse) -> [Property] {
         response.items.map(Property.init)
-    }
-}
-
-extension Property {
-    
-    init(_ response: PropertyResponse) {
-        self.title = response.title
-        self.street = response.street
-        self.zip = response.zip
-        self.text = response.text
-        self.city = response.city
-        self.country = response.country
-        self.geoLocation = response.geoLocation
-        self.imageURL = response.picFilename1.replacingOccurrences(of: "uat.", with: "")
-        self.currency = response.currency
-        self.sellingPrice = response.sellingPrice
-        self.price = response.price
-        self.priceUnit = response.priceUnit
     }
 }
