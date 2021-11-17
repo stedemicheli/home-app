@@ -8,7 +8,7 @@
 import Foundation
 
 struct Property {
-    let id: UUID = UUID()
+    let id: String
     let title: String
     let street: String
     let zip: String
@@ -25,8 +25,25 @@ struct Property {
 
 extension Property {
     
+    init(_ response: PropertyResponse) {
+        self.id = String(response.advertisementId)
+        self.title = response.title
+        self.street = response.street
+        self.zip = response.zip
+        self.text = response.text
+        self.city = response.city
+        self.country = response.country
+        self.geoLocation = response.geoLocation
+        self.imageURL = response.picFilename1.replacingOccurrences(of: "uat.", with: "")
+        self.currency = response.currency
+        self.sellingPrice = response.sellingPrice
+        self.price = response.price
+        self.priceUnit = response.priceUnit
+    }
+    
     init?(property: PersistedProperty) {
-        guard let title = property.title,
+        guard let id = property.id,
+              let title = property.title,
               let street = property.street,
               let zip = property.zip,
               let text = property.text,
@@ -41,6 +58,7 @@ extension Property {
         }
         
         self.init(
+            id: id,
             title: title,
             street: street,
             zip: zip,

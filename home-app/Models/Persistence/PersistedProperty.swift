@@ -10,7 +10,7 @@ import CoreData
 extension PersistedProperty {
     
     convenience init(
-        id: UUID,
+        id: String,
         title: String,
         street: String,
         zip: String,

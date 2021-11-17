@@ -8,7 +8,7 @@
 import Foundation
 
 struct PropertyViewModel: Identifiable {
-    let id: UUID
+    let id: String
     let title: String
     let address: String
     let price: String
