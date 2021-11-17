@@ -33,7 +33,7 @@ struct PropertyParser: AddressParseable, PriceParseable {
         city: String,
         country: String
     ) -> String {
-        ""
+        street + " " + zip + " " + text + " " + city + " " + country // Just a simple parser for now
     }
     
     func parse(
@@ -42,6 +42,6 @@ struct PropertyParser: AddressParseable, PriceParseable {
         price: Int,
         priceUnit: String
     ) -> String {
-        ""
+        String(price) + " " + currency // Just a simple parser for now
     }
 }
